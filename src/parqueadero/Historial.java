@@ -119,10 +119,18 @@ public class Historial {
     }
 
     public void eliminarVehiculoCola(String placa) {
-        // Implementa la lógica para eliminar un vehículo de la cola (si es necesario)
+
     }
 
     public void mostrarVehiculosCola() {
-        // Implementa la lógica para mostrar los vehículos en la cola (si es necesario)
-    }
-}
+        Queue<NodoVehiculo> colaCopia = new LinkedList<>(colaEspera);
+
+        System.out.println("Vehículos en la cola de espera:");
+        while (!colaCopia.isEmpty()) {
+            NodoVehiculo vehiculo = colaCopia.poll();
+            System.out.println("Placa: " + vehiculo.placa +
+                    ", Tipo: " + vehiculo.tipo +
+                    ", Hora de entrada: " + vehiculo.horaEntrada +
+                    ", Hora de salida prevista: " + vehiculo.horaSalidaPrevista);
+        }}}
+

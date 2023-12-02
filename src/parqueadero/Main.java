@@ -1,5 +1,5 @@
 package parqueadero;
-
+import java.time.LocalDateTime;
 import java.util.Scanner;
 
 public class Main{
@@ -63,6 +63,8 @@ public class Main{
                     parqueadero.QuitarEspacio(puesto);
                     break;
                 case 4:
+                    parqueadero.getHistorial().agregarVehiculo("ABC123", "Sedán", LocalDateTime.now(), LocalDateTime.now());
+                    parqueadero.getHistorial().agregarVehiculo("DEF456", "Camioneta", LocalDateTime.now(), LocalDateTime.now().plusHours(2));
                     parqueadero.getHistorial().mostrarVehiculos();
                     break;
                 case 5:
